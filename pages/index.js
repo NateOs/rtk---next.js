@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import displayPic from "../public/assets/crello-255294772-stock-photo-beautiful-african-american-woman-body.jpeg";
 
 export default function Home() {
   return (
@@ -10,8 +11,72 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <p>Hello NextWorld</p>
+      <main className="main">
+        <aside className="featured-gallery">
+          {/* preview image */}
+          <div className="preview-images">
+            <Image
+              src={displayPic}
+              alt="picture of model"
+              className="preview-image"></Image>
+            <Image
+              src={displayPic}
+              alt="picture of model"
+              className="preview-image"></Image>
+            <Image
+              src={displayPic}
+              alt="picture of model"
+              className="preview-image"></Image>
+          </div>
+
+          <div className="featured-image">
+            <Image
+              src={displayPic}
+              alt="picture of model"
+              className="preview-image"></Image>
+          </div>
+        </aside>
+        <section>
+          <div>
+            <h1>Host Lequite Artisitc</h1>
+            <div>
+              <p>Xels Trends</p>
+              {/* profile image here */}
+            </div>
+          </div>
+          <div>
+            <p>Formal Wears</p>
+            <p>Available</p>
+            <p>100% cotton</p>
+          </div>
+          <div>
+            <p>Select Color</p>
+            <span>{/* color items to be mapped through here */}</span>
+          </div>
+          <div>
+            <div>
+              <p>Select Size</p>
+              <span>Size Guide</span>
+            </div>
+            <span>{/* size items to be mapped through here */}</span>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
+            maiores est a quos aspernatur, ipsa maxime molestiae distinctio,
+            molestias eos in debitis, cum rerum. Modi, quas. Ipsum facere fugit
+            impedit, distinctio porro fuga repellendus, illo iure sequi officia
+            quis excepturi possimus minus aliquid repudiandae! Omnis dolore
+            expedita aliquam doloremque praesentium, vitae voluptatum quaerat
+            consequatur optio facilis adipisci harum quisquam minus.
+          </p>
+          <div>
+            <ul>
+              <li>Option 1</li>
+              <li>Option 2</li>
+              <li>Option 3</li>
+            </ul>
+          </div>
+        </section>
       </main>
     </div>
   );
