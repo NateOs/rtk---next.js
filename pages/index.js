@@ -12,7 +12,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="main">
+      <main className="main grid">
         <aside className="featured-gallery">
           {/* preview image */}
           <div className="preview-images">
@@ -65,7 +65,7 @@ export default function Home() {
             <span>{/* color items to be mapped through here */}</span>
           </div>
           <div>
-            <div>
+            <div className="size-container">
               <p>Select Size</p>
               <span>Size Guide</span>
             </div>

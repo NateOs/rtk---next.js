@@ -2,6 +2,7 @@
   background: #1a1f28;
   color: white;
   padding: 2em 0;
+  height: 100vh;
 }
 
 .container {
@@ -24,7 +25,7 @@
 
 .item-details {
   .title {
-    width: 80%;
+    width: 70%;
   }
   .item-title {
     display: flex;
@@ -65,5 +66,19 @@
     justify-content: space-around;
     list-style-type: none;
     list-style: none;
+  }
+}
+
+.size-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 40%;
+}
+
+@media (min-width: 40rem) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(auto, 100%));
   }
 }
