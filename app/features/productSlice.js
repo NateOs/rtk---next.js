@@ -1,8 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  color: "#65350F",
-  size: 32,
+  color: ["#65350F", "#5B2126", "#5B2126"],
+  size: [12, 32, 42, 56],
   status: "available",
   featuredImage: null,
 };
@@ -10,14 +10,14 @@ const initialState = {
 export const productSlice = createSlice({
   name: "product",
   initialState,
-	reducers: {
-	    changeColor: (state, action) => {
-			state.value += action.payload
-		  },
+  reducers: {
+    changeColor: (state, action) => {
+      state.value += action.payload;
+    },
   },
 });
 
 // Action creators are generated for each case reducer function
-export const {changeColor} = productSlice.actions;
+export const { changeColor } = productSlice.actions;
 
 export default productSlice.reducer;
