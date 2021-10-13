@@ -6,6 +6,7 @@ import profilePicture from "../public/assets/profile.jpg";
 
 
 export default function Home() {
+ 
   return (
     <div>
       <Head>

@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import profilePicture from "../public/assets/profile.jpg";
-
+import { useSelector, useDispatch } from "react-redux";
+import { updateColor } from "../app/features/productSlice";
+import { FaCheck } from "react-icons/fa";
 
 export default function ProductDetails() {
+  const product = useSelector((state) => state.product);
+  const dispatch = useDispatch();
+
   return (
     <section className="item-details container">
       <div className="item-title">
@@ -30,7 +35,23 @@ export default function ProductDetails() {
       </div>
       <div>
         <p>Select Color</p>
-        <span>{/* color items to be mapped through here */}</span>
+        <div className="colors">
+          {product.color.map((color, index) => {
+            return (
+              <button
+                key={index}
+                name="color"
+                data-color={color}
+                style={{ background: color }}
+                className={`${
+                  color === color ? "color-btn active" : "color-btn"
+                }`}
+                onClick={() => dispatch(updateColor(color))}>
+                {color === color ? <FaCheck /> : null}
+              </button>
+            );
+          })}
+        </div>
       </div>
       <div>
         <div className="size-container">
