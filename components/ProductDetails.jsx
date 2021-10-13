@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import Image from "next/image";
 import profilePicture from "../public/assets/profile.jpg";
 import { useSelector, useDispatch } from "react-redux";
-import { updateColor } from "../app/features/productSlice";
+import { updateColor, displayBlock } from "../app/features/productSlice";
 import { FaCheck } from "react-icons/fa";
 
 export default function ProductDetails() {
@@ -71,9 +71,17 @@ export default function ProductDetails() {
       </p>
       <div className="options">
         <ul className="options__list">
-          <li className="list-item">Option 1</li>
-          <li className="list-item">Option 2</li>
-          <li className="list-item">Option 3</li>
+          <li className="list-item">
+            <button className="btn">Option 1</button>
+          </li>
+          <li className="list-item">
+            <button className="btn">Option 2</button>
+          </li>
+          <li className="list-item">
+            <button className="btn" onClick={() => dispatch(displayBlock())}>
+              Option 3
+            </button>
+          </li>
         </ul>
       </div>
     </section>

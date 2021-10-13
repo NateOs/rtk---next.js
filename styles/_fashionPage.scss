@@ -108,7 +108,11 @@
 .colors {
   display: flex;
 }
-
+.btn {
+  background: #1a1f28;
+  border: solid #1a1f28 1px;
+  color: #fff;
+}
 @media (min-width: 40rem) {
   .grid {
     display: grid;

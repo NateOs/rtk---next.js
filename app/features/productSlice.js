@@ -5,6 +5,7 @@ const initialState = {
   size: [12, 32, 42, 56],
   status: "available",
   featuredImage: null,
+  isBlock: true,
 };
 
 export const productSlice = createSlice({
@@ -15,10 +16,17 @@ export const productSlice = createSlice({
       // state.color += action.payload;
       console.log(action.payload);
     },
+    displayBlock: (state) => {
+      if (state.isBlock === true) {
+        state.isBlock = false;
+      } else {
+        state.isBlock = true;
+      }
+    },
   },
 });
 
 // Action creators are generated for each case reducer function
-export const { updateColor } = productSlice.actions;
+export const { updateColor, displayBlock } = productSlice.actions;
 
 export default productSlice.reducer;
